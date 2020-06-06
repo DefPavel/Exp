@@ -1,0 +1,91 @@
+@media screen and (max-width: 1115px)
+    .wrapper
+
+        .header
+            font-size: 11px
+
+        .SideBar
+
+        .SideBar .Menu
+            font-size: 15px
+
+        .SideBar .Menu li
+            margin-left: 40px
+
+        .about-block
+            .col:last-child
+            margin-right: 0px
+            justify-content: center
+
+@media screen and (max-width: 1000px)
+    .wrapper
+        .footer-about
+            .col:last-child
+                display: none
+
+@media screen and (max-width: 900px)
+    .wrapper
+        .header
+            display: none
+
+        .Logo-block
+            display: none
+
+        .SideBar
+            justify-content: flex-start
+            margin-top: 0px
+
+            .mobile-bar
+                display: flex
+                .col
+                    .ButtonBar
+                        display: flex
+
+        .about-block
+            flex-direction: column
+            padding-bottom: 40px
+
+            .mob-col
+                display: flex
+                justify-content: center
+                align-items: center
+
+            .col
+                padding-left: 0px
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                text-align: center
+
+            .col span
+                padding: 20px
+
+            .col:last-child
+                display: none
+
+
+        .News-body, .Events-body
+            flex-wrap: wrap
+
+            .col:last-child
+                align-items: center
+                padding-bottom: 50px
+
+@media screen and (max-width: 750px)
+    .wrapper
+        .footer-about
+            .col:first-child
+                display: none
+
+            .col:nth-child(2)
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+
+        footer
+            justify-content: center
+            p
+                margin-left: 0
+                padding-left: 0

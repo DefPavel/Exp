@@ -1,0 +1,460 @@
+//header
+=header
+    width: 100%
+    height: 50px
+    background-color: #0D2D62
+    display: flex
+    flex-direction: row
+    font-family: $LoraBold
+    font-size: 14px
+    color: #fff
+
+    .col
+        flex: 1
+        display: flex
+        flex-direction: row
+        align-items: center
+
+    .col span
+        display: flex
+        flex-direction: row
+        margin-left: 108px
+
+    .col span img
+        width: 16.67px
+        height: 16.67px
+
+    .col span p
+        margin-left: 10px
+
+    .col:last-child
+        justify-content: flex-end
+        margin-left: 0
+        margin-right: 108px
+        flex: 0 1 auto
+//footer
+=footer
+    height:  40px
+    width: 100%
+    background-color: #0D2D62
+    display: flex
+    align-items: center
+    p
+        color: White
+        font-family: "LoraBold"
+        font-size: 14px
+        margin-left: 286px
+
+//About footer
+=footer-about
+    width: 100%
+    height: 303px
+    display: flex
+    flex-direction: row
+    justify-content: center
+    border-top: 1px solid #F2F2F2
+
+    h4
+        font-family: "LoraRegular"
+        font-size: 18px
+
+    .col
+        flex: 1
+        margin-top: 53px
+
+        p
+            display: flex
+            align-items: center
+            color: #888888
+            font-family: "LoraBold"
+            font-size: 14px
+            margin-top: 20px
+
+            img
+                margin-right: 10px
+
+    .col:first-child
+        margin-left: 0px
+//Социальные сети
+=social-network
+    display: flex
+    flex-direction: row
+
+    span
+        width: 54px
+        height: 48px
+        background-color: #E5E5E5
+        border-radius: 50%
+        margin-left: 20px
+        display: flex
+        justify-content: center
+        align-items: center
+
+    span:first-child
+        margin-left: 0px
+
+
+// Крастная линия для подзаголовков
+=redline
+    display: flex
+    flex-direction: row
+    margin-top: 16px
+    margin-bottom:  17px
+
+    span:first-child
+        width: 40px
+        height: 1px
+        background-color: #B80924
+
+    span:last-child
+        width: 205px
+        height: 1px
+        background-color: #888888
+
+//Обычная линия для подзаголовков
+=line
+    width: 70px
+    height: 1px
+    background-color: black
+    margin-top: 20px
+
+
+//Блок новостей
+=News
+    .news-wrap
+        width: 369.98px
+        height: 450.23px
+        background-color: #fff
+        margin-left: 32px
+
+        .news-wrap-h
+            width: 100%
+            height: 239.98px
+            background: url('../../../public/img/News.png') top no-repeat
+            background-size: cover
+            flex: 0 0 auto
+
+            .cover-bckg
+                display: none
+                justify-content: center
+                align-items: center
+                width: 100%
+                height: 100%
+                position: relative
+                background: rgba(255,255,255, 0.5)
+
+            .cover-bckg button
+                width: 156px
+                height: 37px
+                background-color: #B80924
+                border: none
+                font-family: "LoraRegular"
+                font-size: 13px
+                display: flex
+                justify-content: center
+                align-items: center
+                text-align: center
+                color: #fff
+                border-radius: 5px
+                cursor: pointer
+
+                a
+                    display: block
+                    width: 100%
+                    height: 100%
+                    text-decoration: none
+                    color: #fff
+
+        .news-wrap-c
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            flex: 1 0 auto
+            margin-bottom: 40px
+
+            .news-wrap-c-t
+                width: 100%
+                height: 40px
+                display: flex
+                justify-content: center
+                align-items: center
+
+            .news-wrap-c-t h4
+                color: #B80924
+                font-family: "LoraBold"
+                font-size: 18px
+
+            .news-wrap-c-a
+                width: 100%
+                height: auto
+                justify-content: center
+                align-items: center
+
+                p
+                    color: #9A8B8B
+                    font-family: "LoraRegular"
+                    font-size: 14px
+                    text-align: center
+
+        .news-wrap-f
+            width: 100%
+            height: 40px
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+            align-items: center
+            flex: 0 0 auto
+
+        .news-wrap-f img
+            margin-left: 20px
+
+        .news-wrap-f  p
+            margin-left: 10px
+            font-family: "LoraItalic"
+            font-size: 13px
+
+    .news-wrap:hover
+        cursor: default
+
+    .news-wrap:hover .news-wrap-h .cover-bckg
+        display: flex
+
+//Блок Ивентов
+=Event
+    .event-wrapper
+        width: 420px
+        height: 510px
+        display: flex
+        flex-direction: column
+
+    .event-wrapper-h
+        height: 420px
+        background: url('../../../public/img/Fottbal.png') center center no-repeat
+
+        .cover-bckg
+            display: none
+            justify-content: center
+            align-items: center
+            width: 100%
+            height: 100%
+            position: relative
+            background: rgba(255,255,255, 0.5)
+
+        .cover-bckg button
+            width: 216px
+            height: 50px
+            background-color: #0D2D62
+            border: none
+            font-family: "LoraBold"
+            font-size: 18px
+            display: flex
+            justify-content: center
+            align-items: center
+            text-align: center
+            color: White
+            border-radius: 5px
+            cursor: pointer
+
+            a
+                display: block
+                width: 100%
+                height: 100%
+                text-decoration: none
+                color: White
+
+
+    .event-wrapper-f
+        height: 91px
+        display: flex
+        flex-direction: row
+        background-color: #fff
+
+        .event-wrapper-f-d
+            width: 90px
+            height: 90px
+            background-color: #0D2D62
+            color: White
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+
+        .event-wrapper-f-d p:first-child
+            font-family: "LoraBold"
+            font-size: 30px
+
+        .event-wrapper-f-d p:nth-child(2)
+            font-family: "LoraRegular"
+            font-size: 14px
+
+        .event-wrapper-f-d p:last-child
+            font-family: "LoraRegular"
+            font-size: 14px
+
+        .event-wrapper-f-t h4
+            color: #B80924
+            font-family: "LoraBold"
+            font-size: 16px
+            margin-left: 20px
+            margin-top: 8px
+
+        .event-wrapper-f-t p
+            color: #9A8B8B
+            font-family: "LoraBold"
+            font-size: 14px
+            margin-left: 20px
+            display: flex
+            align-items: center
+            text-align: center
+            margin-top: 13.26px
+
+            img
+                margin-right: 10px
+//Слайдер
+=slider
+    position: relative
+    overflow: hidden
+    height: 708px
+
+    .slider__wrapper
+        display: flex
+        transition: transform 0.6s ease
+
+    .slider__item
+        flex: 0 0 100%
+        height: 708px
+        max-width: 100%
+
+    .slider__item div
+        height: 708px
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        color: White
+        text-align: center
+
+    .slider__item div h3
+        font-family: "LoraBold"
+        font-size: 44px
+
+    .slider__item div  p
+        font-family: "LoraRegular"
+        font-size: 24px
+
+    .slider__item div  button
+        width: 210px
+        height: 50px
+        background-color: #B80924
+        color: White
+        border: none
+        border-radius: 5px
+        margin-top: 60px
+        font-family: "LoraBold"
+        font-size: 18px
+
+    .slider__item div  button:hover
+        cursor: pointer;
+
+    .slider__control
+        position: absolute
+        top: 50%
+        display: none
+        align-items: center
+        justify-content: center
+        width: 40px
+        color: #fff
+        text-align: center
+        opacity: 0.5
+        height: 50px
+        transform: translateY(-50%)
+        background: rgba(0, 0, 0, .5)
+
+    .slider__control_show
+        display: flex
+
+    .slider__control:hover,
+    .slider__control:focus
+        color: #fff
+        text-decoration: none
+        outline: 0
+        opacity: .9
+
+    .slider__control_left
+        display: flex
+        left: 0
+
+    .slider__control_right
+        display: flex
+        right: 0
+
+    .slider__control::before
+        content: ''
+        display: inline-block
+        width: 20px
+        height: 20px
+        background: transparent no-repeat center center
+        background-size: 100% 100%
+
+    .slider__control_left::before
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+
+    .slider__control_right::before
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+// Title block
+=Title-Block
+    height: 280px
+    width: 100%
+    background-color: #890013
+    display: flex
+    justify-content: center
+    align-items: center
+    font-family: "LoraBold"
+    color: White
+    flex-direction: column
+    text-align: center
+
+    p
+        display: flex
+        flex-direction: row
+        align-items: center
+        font-size: 68px
+
+//Paginate
+=pag-block
+    display: flex
+    flex-direction: row
+    span
+        width: 40px
+        height: 40px
+        border-color: #0d2d62
+        border-style: solid
+        color: #0d2d62
+        border-width: 2px
+        border-radius: 5px
+        background-color: White
+        margin-left: 10px
+        transition: .3s
+        display: flex
+        justify-content: center
+        align-items: center
+        font-family: 'LoraBold'
+
+    span:first-child
+        margin-left: 0px
+        background-size: contain
+        font-size: 18px
+
+    span:first-child:before
+        content: "\003C"
+
+    span:last-child:before
+        content: "\003E"
+
+    span:hover
+        transition: .3s
+        background-color: #b80924
+        border-color: #b80924
+        color: #fff
+        cursor: pointer

@@ -1,0 +1,858 @@
+
+// Fonts
+//@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600")
+
+// Variables
+//@import "variables"
+
+// Bootstrap
+//@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap"
+
+//Шрифты
+@import fonts
+
+//Миксы
+@import mixins
+
+//Статичесские элементы
+@import static
+
+*,html,body
+  margin: 0px
+  padding: 0px
+
+.wrapper
+	width: 100%
+	height: 100%
+
+	.Logo-block
+		width: 100%
+		display: flex
+		flex-direction: row
+		justify-content: center
+
+		span
+			margin-top: 20px
+
+	.SideBar-Container
+		position: sticky
+		top: 0
+		z-index: 99999
+
+
+	.Side-Bar-Shadow
+		-webkit-box-shadow: 0px 5px 6px -5px rgba(0,0,0,0.56)
+		-moz-box-shadow: 0px 5px 6px -5px rgba(0,0,0,0.56)
+		box-shadow: 0px 5px 6px -5px rgba(0,0,0,0.56)
+
+	.SideBar
+		width: 100%
+		height: 50px
+		margin-top: 20px
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: #fff
+
+		.Menu
+			display: flex
+			flex-direction: row
+			list-style: none
+			font-family: $LoraBold
+			font-size: 18px
+
+			li:first-child
+				margin-left: 0px
+			li
+				margin-left: 50px
+				transition: 0.5s
+			li img
+				width: 10px
+				height: 10px
+
+			li a
+				text-decoration: none
+				color: inherit
+
+			li:hover
+				cursor: pointer
+				color: #B80924
+				transition: 0.5s
+
+		.Mobile-Menu
+			display: flex
+			flex-direction: column
+			position: fixed
+			top: 50px
+			background-color: White
+			height: 100vh
+			width: 280px
+			list-style: none
+			-webkit-box-shadow: inset 0px 4px 6px -5px rgba(0,0,0,0.56)
+			-moz-box-shadow: inset 0px 4px 6px -5px rgba(0,0,0,0.56)
+			box-shadow: inset 0px 4px 6px -5px rgba(0,0,0,0.56)
+			transition: all .5s ease
+
+			.Menu-Logo
+				width: 100%
+				display: flex
+				justify-content: center
+				align-items: center
+				padding-top: 20px
+				padding-bottom: 20px
+
+			.Menu-Logo > img
+				height: 90px
+
+
+			li
+				height: 50px
+				margin-left: 0
+				display: flex
+				align-items: center
+				font-family: "LoraBold"
+				border-bottom: 1px solid #f6f7f8
+				padding-left: 40px
+				padding-right: 40px
+				font-size: 16px
+				transition: 0.5s
+
+				input
+					border-radius: 5px
+					border: 1px solid #b1b1b1
+					padding: 15px
+
+				input:focus
+					outline: none
+				a
+					text-decoration: none
+					color: Black
+					flex: 1
+			li:hover a
+				color: #B80924
+				transition: 0.5s
+
+	.mobile-bar
+		display: none
+		flex-direction: row
+		width: 100%
+
+		.col
+
+			.ButtonBar
+				display: none
+				width: 40px
+				height: 40px
+				background-color: #B80924
+				border-radius: 5px
+				margin-left: 20px
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				transition: 0.5s
+
+			.ButtonBar div
+				width: inherit
+				height: inherit
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+
+			.ButtonBar div span
+				width: 50%
+				height: 2px
+				background-color: #F5F7FA
+				margin-top: 5px
+				border-radius: 2px
+				transition: 0.5s
+
+			.ButtonBar div span:first-child
+				margin-top: 0px
+
+			.ButtonBar:hover
+				cursor: pointer
+				background-color: #F5F7FA
+				transition: 0.5s
+
+			.ButtonBar:hover span
+				background-color: #B80924
+				transition: 0.5s
+
+			.cl-un-mob-mn
+				font-size: 35px
+				color: white
+				transition: 0.5s
+
+			.ButtonBar:hover .cl-un-mob-mn
+				color: #B80924
+				transition: 0.5s
+
+
+			.mobile-header
+				display: flex
+				flex-direction: column
+				align-items: center
+				justify-content: center
+				width: 40px
+				height: 90%
+				margin-right: 10px
+				transition: 0.6s
+
+			.mobile-header > div
+				width: inherit
+				height: inherit
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-direction: column
+
+			.mobile-header > div span
+				width: 5px
+				height: 5px
+				border-radius: 50%
+				background-color: #000
+				margin-top: 3px
+
+			.mobile-header-transform
+				transform: rotateZ(90deg)
+				transition: 0.6s
+
+			.mobile-header span:first-child
+				margin-top: 0px
+
+			.mobile-header:hover
+				cursor: pointer
+
+		.col:nth-child(1)
+			flex: 1
+
+		.col:nth-child(2)
+			flex: 4
+			display: flex
+			justify-content: center
+			align-items: center
+
+			h3
+				font-family: "LoraBold"
+				font-size: 18px
+				color: #0D2D62
+
+		.col:nth-child(3)
+			flex: 1
+			display: flex
+			align-items: center
+			justify-content: flex-end
+
+	.mobile-bar-transform
+		transform: rotateZ(90deg)
+		transition: 0.6s
+
+	.mobile-info
+		width: 260px
+		height: 156px
+		display: flex
+		background-color: #fff
+		position: fixed
+		z-index: 99999
+		right: 0
+		box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2)
+		flex-direction: column
+		color: #888888
+		font-family: "LoraBold"
+		font-size: 14px
+		padding: 20px
+
+	.mobile-info p
+		display: flex
+		margin-top: 25px
+		align-items: center
+
+		img
+			margin-right: 10px
+
+	.mobile-info p:first-child
+		margin-top: 0px
+
+	.mobile-info p:hover
+		cursor: pointer
+		color: #B80924
+
+	.about-block
+		width: 100%
+		min-height: 296px
+		display: flex
+		flex-direction: row
+		margin-top: 20px
+
+		.mob-col
+			display: none
+
+		.col
+			flex: 1
+			padding-left: 115px
+
+		.col h3
+			font-family: "LoraBold"
+			font-size: 44px
+
+		.col span
+			color:#9A8B8B
+			font-family: "LoraRegular"
+			font-size: 14px
+
+			p
+				margin-top: 20px
+				max-width: 552px
+
+		.col button
+			width: 245px
+			height: 50px
+			background-color: #0D2D62
+			font-family: "LoraBold"
+			font-size: 16px
+			border: none
+			color: #fff
+			margin-top: 20px
+			display: flex
+			justify-content: center
+			align-items: center
+			transition: 0.5s
+
+			img
+				margin-left: 10px
+
+		.col button:hover
+			cursor: pointer
+			background-color: #B80924
+			transition: 0.5s
+
+		.col:last-child
+			padding-left: 0px
+			margin-right: 115px
+			display: flex
+			align-items: center
+			justify-content: flex-end
+
+	.Speciality-block
+		width: 100%
+		min-height: 976px
+		padding-bottom:  40px
+		background: url("../../../public/img/Spc.png"),url("../../../public/img/Spec.png") no-repeat
+		background-size: cover
+		background-attachment: fixed, fixed
+
+		.spc-header
+			width: 100%
+			height: 145px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+
+		.spc-header h3
+			color: White
+			font-family: "LoraBold"
+			font-size: 48px
+
+			.line
+				background-color: #fff
+
+		.scp-content
+			display: flex
+			flex-direction: column
+
+			.row
+				display: flex
+				flex-direction: row
+				justify-content: center
+				align-items: center
+				flex-wrap: wrap
+
+			.row .spc-b-c
+				width: 298px
+				height: 330px
+				display: flex
+				flex-direction: column
+				margin-left: 50px
+				margin-top: 50px
+
+			.row .spc-b-c-h
+				height: 262px
+				width: 100%
+				background: url("../../../public/img/Avtomex.png") no-repeat center center
+
+			.row .spc-b-c-t
+				width: 100
+				height: 70px
+				display: flex
+				justify-content: center
+				align-items: center
+				background-color: #0D2D62
+				color: #fff
+				font-family: "LoraBold"
+				font-size: 18px
+
+			.row .spc-b-c:first-child
+				margin-left: 0px
+
+	.info-block
+		width: 100%
+		height: 346px
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+
+	.info-block h3
+		font-family: "LoraRegular"
+		font-size: 44px
+
+	.info-block button
+		width: 245px
+		height: 50px
+		background-color: #0D2D62
+		font-family: "LoraBold"
+		font-size: 16px
+		border: none
+		color: #fff
+		margin-top: 20px
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top:  60px
+		transition: 0.5s
+
+	.info-block button:hover
+		cursor: pointer
+		background-color: #B80924
+		transition: 0.5s
+
+	.info-block2
+		width: 100%
+		height: 574px
+		background: url("../../../public/img/Books.png") no-repeat
+		background-size: cover
+		background-attachment: fixed, fixed
+
+		.info-header
+			height: 184px
+			width: 100%
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+
+		.info-header h3
+			color: #fff
+			font-family: "LoraRegular"
+			font-size: 44px
+
+			.line
+				background-color: #fff
+
+		.info-content
+			display: flex
+			flex-direction: column
+
+		.row
+			display: flex
+			flex-direction: row
+			justify-content: center
+			align-items: center
+
+		.row span
+			width: 124.12px
+			height: 124.12px
+			background: url('../../../public/img/Atom.png') no-repeat center center
+			background-size: cover
+			margin-left: 121px
+			display: flex
+			align-items: flex-end
+
+		.row span:first-child
+			margin-left: 0px
+
+	.news-block
+		width: 100%
+		min-height: 1270px
+		padding-bottom: 40px
+		background-color: #F5F7FA
+
+		.news-block-header
+			width: 100%
+			height: 180px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+
+		.news-block-header h3
+			font-family: "LoraBold"
+			font-size: 44px
+
+		.news-block-content
+			display: flex
+			flex-direction: column
+
+			.row
+				display: flex
+				flex-direction: row
+				justify-content: center
+				align-items: center
+				margin-top: 20px
+				flex-wrap: wrap
+				+News
+
+			.row:first-child
+				margin-top: 0px
+
+		.news-block-footer
+			width: 100%
+			height: 200px
+			display: flex
+			justify-content: center
+			align-items: center
+
+		.news-block-footer button
+			width: 216px
+			height: 50px
+			background-color: #B80924
+			font-family: "LoraBold"
+			font-size: 16px
+			border: none
+			color: #fff
+			margin-top: 20px
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-top:  60px
+			transition: 0.5s
+
+			img
+				margin-left: 10px
+
+		.news-block-footer button:hover
+			cursor: pointer
+			background-color: #0D2D62
+			transition: 0.5s
+
+	.news-block:first-child
+		margin-left: 0px
+
+	.event-block
+		width: 100%
+		min-height: 1593px
+		display: flex
+		flex-direction: column
+		background-color: #F5F7FA
+
+		.event-block-header
+			width: 100%
+			height: 147px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+
+		.event-block-header h3
+			font-family: "LoraBold"
+			font-size: 44px
+
+		.event-block-content
+			width: 100%
+			display: flex
+			flex-direction: column
+
+			.row
+				display: flex
+				flex-direction: row
+				justify-content: center
+				align-items: center
+				flex-wrap: wrap
+				+Event
+
+				.event-wrapper:nth-child(2)
+					margin-left: 100px
+
+				.event-wrapper:hover
+					cursor: default
+
+				.event-wrapper:hover .event-wrapper-h .cover-bckg
+					display: flex
+
+			.row:last-child
+				margin-top: 100px
+
+
+		.event-block-footer
+			width: 100%
+			height: 200px
+			display: flex
+			justify-content: center
+			align-items: center
+
+		.event-block-footer button
+			width: 245px
+			height: 50px
+			background-color: #0D2D62
+			font-family: "LoraBold"
+			font-size: 16px
+			border: none
+			color: #fff
+			margin-top: 20px
+			display: flex
+			justify-content: center
+			align-items: center
+			transition: 0.5s
+
+			img
+				margin-left: 10px
+
+		.event-block-footer button:hover
+			cursor: pointer
+			background-color: #B80924
+			transition: 0.5s
+
+	.News-body, .Events-body
+		width: 100%
+		display: flex
+		flex-direction: row
+		background-color: #F5F7FA
+		.col
+			.filter-block
+                display: flex
+                flex-direction: column
+                margin-top: 100px
+
+                .redline
+                    span:last-child
+                        width: 320px
+
+                .search-sp
+                    display: flex
+                    flex-direction: row
+
+                .search-sp button
+                    width: 60px
+                    height: 52px
+                    background-color: #B80924
+                    border: none
+                    border-radius: 5px
+                    transition: 0.5s
+                    position: relative
+                    margin-left: -4px
+
+                .search-sp button:hover
+                    cursor: pointer
+                    background-color: #0D2D62
+                    transition: 0.5s
+
+                .search-sp input
+                    width: 287px
+                    height: 50px
+                    font-family: 'LoraRegular'
+                    font-size: 18px
+                    border: 1px solid #ced4da
+                    border-radius: 5px
+
+                .filter-ar
+                    display: flex
+                    flex-direction: row
+                    align-items: center
+
+                    .f-col:first-child
+                        flex: 1
+
+                    .f-col:last-child
+                        flex: 5
+
+                .filter-ar p
+                    font-family: 'LoraRegular'
+                    font-size: 18px
+                    margin-right: 10px
+                    color: #B80924
+
+                .filter-ar select
+                    width: 287px
+                    height: 50px
+                    border: 1px solid #ced4da
+                    border-radius: 5px
+                    font-family: 'LoraRegular'
+                    font-size: 18px
+
+                .filter-ar:last-child
+                    margin-top: 20px
+
+			.filter-block:first-child
+				margin-top: 0px
+
+		.col:first-child
+			flex: 2
+
+		.col:last-child
+			flex: 1
+			display: flex
+			flex-direction: column
+			padding-top: 170px
+
+		.col:last-child h3
+			font-family: 'LoraBold'
+			font-size: 20px
+
+	.news-p-w
+		width: 100%
+		display: flex
+		flex-direction: column
+
+		.title-page
+			width: 100%
+			display: flex
+			flex-direction: column
+			margin-left: 50px
+			margin-top: 119px
+
+		.title-page h3
+			font-family: LoraBold
+			font-size: 44px
+
+		.title-page span
+			display: flex
+			font-family: 'LoraItalic'
+			font-size: 18px
+			margin-top: 20px
+			align-items: center
+
+			img
+				width: 16px
+				height: 16px
+				margin-right: 10px
+
+		.news-pg-con-wrap
+			width: 100%
+			display: flex
+			justify-content: center
+			margin-top: 119px
+			margin-bottom: 119px
+
+			.news-pg-con-bl
+				width: 769px
+				display: flex
+				flex-direction: column
+				justify-content: center
+
+				.news-pg-con-bl-img
+					width: 100%
+					display: flex
+					justify-content: center
+
+				.news-pg-con-bl-text
+					display: flex
+					justify-content: center
+					margin-top: 20px
+					flex-direction: column
+
+					p
+						font-family: "LoraRegular"
+						font-size: 18px
+						line-height: 30px
+						word-wrap: break-word
+						text-indent: 20px
+						padding: 30px
+
+	.ev-pg-wr
+		width: 100%
+		display: flex
+		flex-direction: column
+
+		.col
+			display: flex
+			flex-direction: row
+
+			.row
+				flex: 1
+				display: flex
+				flex-direction: column
+				margin-top: 119px
+
+				.events-preview
+					width: 540px
+
+				.events-text-bl
+					margin-top: 20px
+
+					.redline
+						width: 100%
+						span:last-child
+							width: inherit
+
+					h3
+						font-family: "LoraBold"
+						font-size: 25px
+
+					p
+						margin-top: 20px
+						font-family: "LoraRegular"
+						font-size: 18px
+
+					.events-text-date
+						display: flex
+						flex-direction: column
+
+					.events-text-date span
+						display: flex
+						flex-direction: row
+						margin-top: 10px
+
+					.events-text-date p
+						margin-top: 0
+						font-size: 18px
+
+					.events-text-date p:first-child
+						font-family: "LoraBold"
+						margin-right: 10px
+
+					.events-text-date p:last-child
+						font-family: "LoraRegular"
+						color: #888888
+
+				.events-text-head
+					font-family: 'LoraBold'
+					font-size: 44px
+
+				.events-text-head p
+					font-family: "LoraRegular"
+					font-size: 18px
+					text-indent: 20px
+					margin-top: 20px
+
+				.events-text-footer button
+					width: 250px
+					height: 50px
+					background-color: #890013
+					font-family: "LoraBold"
+					color: White
+					border: none
+					margin-top: 60px
+
+			.row:first-child
+				padding-left: 50px
+				padding-right: 40px
+
+			.row:last-child
+				padding-right: 50px
+
+		.col:first-child
+			padding-bottom: 156px
+
+		.col:last-child
+			background-color: #F5F7FA
+			padding-bottom: 156px
+
+			.event-block-content
+				.row
+					flex-direction: row
+					padding: 0
+
+//Медиа запросы
+@import media
